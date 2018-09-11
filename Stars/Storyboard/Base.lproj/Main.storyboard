@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Stars View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Stars" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StarsViewController" customModule="Stars" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,20 +39,33 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lao-f5-k78">
                                                 <rect key="frame" x="0.0" y="0.0" width="177" height="30"/>
                                                 <state key="normal" title="List Stars"/>
+                                                <connections>
+                                                    <action selector="listStarsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qen-0W-qRq"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVW-ux-6wB">
                                                 <rect key="frame" x="182" y="0.0" width="177" height="30"/>
                                                 <state key="normal" title="Create"/>
+                                                <connections>
+                                                    <action selector="createStarButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bl1-Qc-6n2"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="06D-Aq-hr0">
                                         <rect key="frame" x="0.0" y="120" width="359" height="319"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="319" id="ptk-eH-sYL"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="06D-Aq-hr0" firstAttribute="leading" secondItem="z5m-6f-snU" secondAttribute="leading" constant="20" id="3dt-hS-WJK"/>
+                                    <constraint firstAttribute="trailing" secondItem="06D-Aq-hr0" secondAttribute="trailing" constant="20" id="C1d-Pl-bCe"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -65,6 +78,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="distanceTextField" destination="bFK-6c-FN0" id="p5L-kh-yss"/>
+                        <outlet property="starListTextView" destination="06D-Aq-hr0" id="Ard-j9-JCP"/>
+                        <outlet property="starNameTextField" destination="YEd-ca-qUg" id="YRY-eS-L73"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
