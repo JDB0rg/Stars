@@ -54,14 +54,38 @@
 		118EA1D0214821520077318B /* Stars */ = {
 			isa = PBXGroup;
 			children = (
+				118EA1E3214821EC0077318B /* Resources */,
+				118EA1E52148220A0077318B /* View Controller */,
+				118EA1E4214821F70077318B /* Storyboard */,
+			);
+			path = Stars;
+			sourceTree = "<group>";
+		};
+		118EA1E3214821EC0077318B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				118EA1D1214821520077318B /* AppDelegate.swift */,
-				118EA1D3214821520077318B /* ViewController.swift */,
-				118EA1D5214821520077318B /* Main.storyboard */,
 				118EA1D8214821550077318B /* Assets.xcassets */,
 				118EA1DA214821550077318B /* LaunchScreen.storyboard */,
 				118EA1DD214821550077318B /* Info.plist */,
 			);
-			path = Stars;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		118EA1E4214821F70077318B /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				118EA1D5214821520077318B /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		118EA1E52148220A0077318B /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				118EA1D3214821520077318B /* ViewController.swift */,
+			);
+			path = "View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,7 +305,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Stars/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Stars/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,7 +322,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Stars/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Stars/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
